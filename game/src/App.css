@@ -1,28 +1,28 @@
-.App {
+.fa-star{
+  margin: 0.5em;
+ font-size: 24px;
+ background-image: image-set("favicon.ico");
+}
+
+
+span{
+  display: inline-block;
+  margin: 0.5em;
   text-align: center;
+  background-color: #ccc;
+  width: 24px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.selected{
+  background-color: #eee;
+  color: #ddd;
+  cursor: not-allowed;
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+ 
+.used {
+  background-color: #aaddaa;
+  color: #99bb99;
+  cursor: not-allowed;
 }
