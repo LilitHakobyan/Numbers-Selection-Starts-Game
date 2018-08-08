@@ -6,48 +6,48 @@ import './App.css';
 const Stars =(props)=>{
   const numberOfStars = 1+ Math.floor(Math.random()*9);
 
-  let stars=[];
-  for(let i=0; i<numberOfStars;i++){
-    stars.push(<i key={i} className="fa fa-star"></i>)
-  }
 return(
   <div className="col-5" >
-    {stars}
+    {
+      _.range(numberOfStars).map(i=>
+      <i key={i} className="fa fa-star"></i>
+      )
+    }
    </div>
 );
-}
+};
 
 const Button =(props)=>{
   return(
     <div className="col-2">
       <button className="btn btn-primary" > =</button>
        </div>
-  );
-    
+  );  
   }
   
   const Answer =(props)=>{
     return(
       <div className="col-5">
-        .......
+       <span>5</span>
          </div>
     );
       
     }
 
-    const Number =(props) =>{
-     let numbers=[];
-      for(let i=1; i<11;i++){
-      numbers.push(<span key={i} ></span>)
-  }
+    const Numbers =(props) =>{
       return(
-        <div className="card text-center">
-         <div>
-           {numbers}
-          </div>
-        </div>
-      )
-    }
+           <div className="card text-center">
+            <div>
+             {
+             Numbers.list.map((number,i)=>
+             <span key={i} >{number}</span>
+             )}
+             </div>
+           </div>
+         );
+       };
+    Numbers.list=_.range(1, 10);
+
 class Game extends React.Component{
   render()
   {
@@ -61,7 +61,7 @@ class Game extends React.Component{
         <Answer />
         </div>
         <br />
-        <Number />
+        <Numbers />
          </div>
     );
   }
